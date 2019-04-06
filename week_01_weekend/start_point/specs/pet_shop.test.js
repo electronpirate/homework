@@ -202,7 +202,7 @@ describe('pet shop', () => {
 
   test('customer cant buy a pet if they cant afford it', () => {
     var customer = customers[1];
-    var pet = myFunctions.getPetByName(petShop, "Athur");
+    var pet = myFunctions.getPetByName(petShop, "Arthur");
     myFunctions.sellPetToCustomer(petShop, pet, customer);
 
     expect(myFunctions.getCustomerPetCount(customers[0])).toBe(0);
