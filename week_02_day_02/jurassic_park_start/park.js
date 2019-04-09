@@ -28,9 +28,9 @@ class Park{
 
 
 
-    for (let i = 0; i < dinosaur._guestsAttractedPerDay; i++) {
-      if(dinosaur[i]._guestsAttractedPerDay >= 60){
-        return dinosaur[i]._guestsAttractedPerDay;
+    for (let i = 1; i < this.dinosaurCollection.length; i++) {
+      if(this.dinosaurCollection[i].guestsAttractedPerDay >= 60){
+        return this.dinosaurCollection[i].guestsAttractedPerDay;
       }
   }
 }
