@@ -26,11 +26,10 @@ Bus.prototype.removeAllPassengers = function (passengers) {
   this.passengers.splice(0, this.passengers.length); //this is unnatural but works
 };
 
-// Bus.prototype.addAllPassengers = function () {
-//   for (passenger of this.passengers) {
-//     this.addPassenger(passenger);
-//   }
-// };
+Bus.prototype.addAllPassengers = function (passengers) {
+  this.passengers = this.passengers.concat(passengers);
+};
+
 
 
 
