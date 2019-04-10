@@ -4,7 +4,11 @@ class Park{
     this.name = name;
     this.ticketPrice = ticketPrice;
     this.dinosaurCollection = dinosaurCollection;
-
+    this.findDinosaur = function(dinosaurCollection){
+      return dinosaurCollection.filter(function(dinosaur){
+        return dinosaur === 'Allosaurus';
+      });
+    }
   }
   getParkName(){
     return this.name;
@@ -25,19 +29,22 @@ class Park{
     this.dinosaurCollection.splice(0, this.dinosaurCollection.length);
   }
   mostAttention(){
+    let charmingDinosaur = this.dinosaurCollection[0];
 
+    for (var i = 1; i < this.dinosaurCollection.length; i++) {
 
+      if(this.dinosaurCollection[i].guestsAttractedPerDay > charmingDinosaur.guestsAttractedPerDay){
 
-    for (let i = 1; i < this.dinosaurCollection.length; i++) {
-      if(this.dinosaurCollection[i].guestsAttractedPerDay >= 60){
-        return this.dinosaurCollection[i].guestsAttractedPerDay;
+        charmingDinosaur = this.dinosaurCollection[i];
       }
+    }
+    return charmingDinosaur;
   }
+
+
+
 }
-// findSpecies(){
-//   for loop
-// }
-}
+
 
 
 module.exports = Park;

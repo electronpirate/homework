@@ -47,14 +47,13 @@ let dinosaur3;
 
   test('should be able to find the dinosaur that attracts the most visitors', () => {
     // write your code here
-    park.mostAttention();
-    expect(park.dinosaurCollection.guestsAttractedPerDay).toBe(60);
+    expect(park.mostAttention()).toEqual(dinosaur3);
   });
 
   test('should be able to find all dinosaurs of a particular species', () => {
     // write your code here
-    park.findSpecies();
-    expect(dinosaur.species).toBe('Allosaurus');
+
+    expect(park.findDinosaur()).toBe('Allosaurus');
 
   });
 
