@@ -14,12 +14,16 @@ class Player {
 addCard(card){
   this.cards.push(card);
 };
-selectCategory(category){
-  const getCardCategory = this.cards.findIndex((category) => {
-    return category === this.cards.kagune;
-  });
+
+selectCategory(card, category){
+  // const getCardCategory = this.cards.findIndex((category) => {
+  //   return category === this.cards.kagune;
+  // });
+  return card[category];
+
 };
-  playTopCard(){
+
+playTopCard(){
   this.cards = this.cards.pop();
 };
 

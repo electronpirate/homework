@@ -27,31 +27,36 @@ beforeEach(() => {
   card6 = new Card('Tsukiyama', 6, 7, 8);
 });
 
-// TESTS
-test('should start with an empty card deck', () => {
-  expect(player1.cards && player2.cards).toEqual([]);
-});
-test('should be able to draw card from card deck', () => {
-  player1.addCard(card1);
-  player2.addCard(card2);
-  expect(player1.cards).toEqual([card1]);
-  expect(player2.cards).toEqual([card2]);
-});
-test('should have a name', () => {
-  expect(player1.name).toBe('Kaneki');
-  expect(player2.name).toBe('Kirishima');
-});
-test('should be able to select category', () => {
-  player1.selectCategory();
-  player2.selectCategory();
-  expect(card1.kagune).toBe(9);
-  expect(card3.kagune).toBe(10);
-});
-test('player should be able to play the top card', () => {
-  player1.addCard(card1);
-  player1.playTopCard();
-  expect(player1.cards).toEqual(card1);
-});
+  // TESTS
+  test('should start with an empty card deck', () => {
+    expect(player1.cards && player2.cards).toEqual([]);
+  });
+
+  test('should be able to draw card from card deck', () => {
+    player1.addCard(card1);
+    player2.addCard(card2);
+    expect(player1.cards).toEqual([card1]);
+    expect(player2.cards).toEqual([card2]);
+  });
+
+  test('should have a name', () => {
+    expect(player1.name).toBe('Kaneki');
+    expect(player2.name).toBe('Kirishima');
+  });
+
+  test('should be able to select category', () => {
+    player1.addCard(card1);
+    player2.addCard(card2);
+
+    expect(player1.selectCategory(card1, 'agility')).toBe(8);
+    expect(player2.selectCategory(card2, 'agility')).toBe(6);
+  });
+
+  test('player should be able to play the top card', () => {
+    player1.addCard(card1);
+    player1.playTopCard();
+    expect(player1.cards).toEqual(card1);
+  });
 
 
 });

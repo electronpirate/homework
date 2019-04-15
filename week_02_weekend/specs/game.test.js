@@ -32,15 +32,14 @@ describe('Game', () => {
     card6 = new Card('Tsukiyama', 6, 7, 8);
     cards = [card1, card2, card3, card4, card5, card6];
 
-    game = new Game(player1, player2, cards);
+    game = new Game(players, cards);
 
 
 
   });
 
   test('game should have players', () => {
-    expect(game.players).toEqual(game.players);
-
+    expect(game.players[0].name).toBe('Kaneki');
   });
 
   test('should have cards', () => {
@@ -57,7 +56,7 @@ describe('Game', () => {
     player1.selectCategory(card3.kagune);
     game.calculateWinner();
     const winner = game.players[0];
-    expect(winner).toEqual(game.player1);
+    expect(winner).toEqual(game.players[0]);
   });
 
 });
