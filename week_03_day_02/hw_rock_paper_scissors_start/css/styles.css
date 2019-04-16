@@ -2,6 +2,12 @@ body{
   background-color: whitesmoke;
 }
 
+#result{
+font-size: 23px;
+color: darkred;
+font-weight: bold;
+}
+
 
 h1{
   color: white;
@@ -29,13 +35,15 @@ button:hover{
   background-color: darkred;
 }
 div{
-  
+
   background-color: teal;
   display: inline-block;
+  width: 200px;
+  height: 150px;
   font-size: 18px;
-  text-align: center;
   color:white;
   padding: 5px;
   border: 2px solid green;
+
 
 }
