@@ -1,0 +1,41 @@
+body{
+  background-color: whitesmoke;
+}
+
+
+h1{
+  color: white;
+  background-color: teal;
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 5px;
+  display: inline-block;
+
+}
+
+
+
+button{
+  color: white;
+  background-color: crimson;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid black;
+
+}
+
+button:hover{
+  background-color: darkred;
+}
+div{
+  
+  background-color: teal;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  color:white;
+  padding: 5px;
+  border: 2px solid green;
+
+}
