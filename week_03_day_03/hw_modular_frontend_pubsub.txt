@@ -1,0 +1,8 @@
+
+### ANSWERS
+
+1. It publishes it's data and subscribes from select_view.js
+2. For listening to user selection and populating dropdown with choice it subscribes from animals.js
+3. It's looping through animalsData and creates element of animal which is then available for the user to pick from
+4. It subscribes from animals.js data depending on what user selected and then it uses render function to provide animal description. 
+5. It's responsible for DOM content being ready so manipulation and interaction between DOM elements can take place.
