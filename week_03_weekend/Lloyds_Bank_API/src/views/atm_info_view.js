@@ -20,7 +20,24 @@ class AtmInfoView {
     const cityName = document.createElement('h3');
     cityName.textContent = `City: ${atmDetailedData.Location.PostalAddress.TownName}`;
     const streetName = document.createElement('p');
-    streetName.textContent = `Street: ${atmDetailedData.Location.PostalAddress.AddressLine}`;
+    var addr = atmDetailedData.Location.PostalAddress.AddressLine;
+    addr = addr[0].substring(1, addr[0].length - 1);
+    streetName.textContent = `Street: ${addr}`;
+    const postCode = document.createElement('p');
+    postCode.textContent = `Post Code: ${atmDetailedData.Location.PostalAddress.PostCode}`;
+    const textLine = document.createElement('p');
+    textLine.textContent = 'Service available:'
+    const ul = document.createElement('ul');
+
+
+    atmDetailedData.ATMServices.forEach((serv) => {
+      const atmServices = document.createElement('li');
+      atmServices.textContent = `${serv}`;
+      ul.appendChild(atmServices);
+
+    })
+
+
 
 
     // forEach loop to create vertical List
@@ -28,6 +45,9 @@ class AtmInfoView {
     this.container.innerHTML = '';
     this.container.appendChild(cityName);
     this.container.appendChild(streetName);
+    this.container.appendChild(postCode);
+    this.container.appendChild(textLine);
+    this.container.appendChild(ul);
   }
 }
 
