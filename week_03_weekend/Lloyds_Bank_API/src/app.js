@@ -5,8 +5,6 @@ const AtmInfoView = require('./views/atm_info_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const atm = new Atm();
-  atm.getData();
 
   const atmDropdown = new SelectView();
   atmDropdown.bindEvents();
@@ -14,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const atmInfoDisplay = new AtmInfoView();
   atmInfoDisplay.bindEvents();
 
-  
+  const atm = new Atm();
+  atm.bindEvents();
+  atm.getData();
 
 });

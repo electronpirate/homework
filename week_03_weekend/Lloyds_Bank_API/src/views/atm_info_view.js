@@ -19,13 +19,15 @@ class AtmInfoView {
   render(atmDetailedData){
     const cityName = document.createElement('h3');
     cityName.textContent = `City: ${atmDetailedData.Location.PostalAddress.TownName}`;
-
+    const streetName = document.createElement('p');
+    streetName.textContent = `Street: ${atmDetailedData.Location.PostalAddress.AddressLine}`;
 
 
     // forEach loop to create vertical List
 
     this.container.innerHTML = '';
     this.container.appendChild(cityName);
+    this.container.appendChild(streetName);
   }
 }
 
