@@ -3,7 +3,7 @@ const { Pool } = require("pg");
 // Configure the Pool object to connect to our local database
 const pool = new Pool({
   host: "localhost",
-  database: "flowers"
+  database: "flower"
 });
 
 // Declare a class called SqlRunner with a static **run** method
