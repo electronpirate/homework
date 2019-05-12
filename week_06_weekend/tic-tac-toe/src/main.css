@@ -1,0 +1,105 @@
+body {
+  font: 18px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-image: url('./components/VaultTec.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0,0,0,.3);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+.home {
+  font-size: 26px;
+  position:absolute;
+  top:56%;
+  left:50%;
+  transform:translate(-50%, -50%);
+
+}
+
+.about {
+  position:absolute;
+  top:55%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.board {
+
+  position: absolute;
+  top:61%;
+  left:50%;
+  transform:translate(-50%, -50%);
+
+
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: white;
+
+}
+
+.square {
+  /* background: #fff; */
+  background-image: url('./components/screen3.png');
+
+
+  border: 2px solid black;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 100px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
