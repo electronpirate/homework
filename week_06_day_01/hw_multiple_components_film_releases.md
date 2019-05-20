@@ -21,9 +21,6 @@ Draw a diagram that details:
   - the component hierarchy (which component renders which)
   - any props that are passed from parent to child components
   - any state inside any of the components
-  
-  
-  
 
 ## Part 2
 Answer the following questions:

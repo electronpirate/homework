@@ -15,7 +15,8 @@ class Board extends React.Component {
     if (this.calculateWinner(squares) || squares[squareTile]) {
       return;
     }
-    squares[squareTile] = this.state.xIsNext ? <img src='/Power_Armor.jpg' /> : <img src='/Deathclaw.jpg'/>;
+    // const imageSource = `/images/${this.state.xIsNext}.jpg`
+    squares[squareTile] = this.state.xIsNext ? <img className='powerimage' src='/images/Power_Armor.jpg' /> : <img className='deathimage' src='/images/Deathclaw.jpg'/>;
     this.setState({
       squares: squares,
       xIsNext: !this.state.xIsNext,
@@ -43,6 +44,7 @@ class Board extends React.Component {
     [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i++) {
+    console.log(squares);
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];

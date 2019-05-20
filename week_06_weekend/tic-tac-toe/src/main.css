@@ -87,6 +87,18 @@ li a:hover {
   width: 100px;
 }
 
+.powerimage {
+  height: 100px;
+  width: 100px;
+}
+
+.deathimage {
+  height: 100px;
+  width: 100px;
+}
+
+
+
 .square:focus {
   outline: none;
 }
