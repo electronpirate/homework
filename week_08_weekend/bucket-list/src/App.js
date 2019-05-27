@@ -1,12 +1,15 @@
 import React from 'react';
-import SelectCountryContainer from './containers/SelectCountryContainer';
+import SelectCountry from './components/SelectCountry';
+import BucketList from './components/BucketList';
+
 import './App.css';
 
 const App = (props) => {
   return (
     <>
       <h1>Country Bucket-list</h1>
-      <SelectCountryContainer />
+      <SelectCountry />
+      <BucketList />
     </>
   );
 };
