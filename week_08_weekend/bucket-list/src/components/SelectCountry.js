@@ -18,7 +18,7 @@ class SelectCountry extends Component {
 
   createOptions(){
     return this.props.data.map((country, index) => {
-      return <option value={index}>{country.name}</option>
+      return <option key={index} value={index}>{country.name}</option>
     })
   }
 
